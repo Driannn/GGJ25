@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu2v781qqxgaw"]
+
+[ext_resource type="Script" path="res://scripts/menu_screen.gd" id="1_mnfri"]
+[ext_resource type="Texture2D" uid="uid://ca1d1b2p7gmux" path="res://assets/BKG.png" id="2_bl4t2"]
+[ext_resource type="Texture2D" uid="uid://bkdveeredabcc" path="res://assets/Illustration21.png" id="3_xy5p6"]
+[ext_resource type="PackedScene" uid="uid://glqk1ykpkthp" path="res://scenes/bubble_spawner.tscn" id="4_owtfc"]
+
+[node name="MenuScreen" type="CanvasLayer"]
+script = ExtResource("1_mnfri")
+
+[node name="Gradient" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bl4t2")
+
+[node name="Title" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xy5p6")
+
+[node name="MenuBox" type="VBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -142.0
+offset_right = 20.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Play" type="Button" parent="MenuBox"]
+layout_mode = 2
+text = "PLAY"
+
+[node name="Tutorial" type="Button" parent="MenuBox"]
+layout_mode = 2
+text = "TUTORIAL"
+
+[node name="Credits" type="Button" parent="MenuBox"]
+layout_mode = 2
+text = "CREDITS"
+
+[node name="BubbleSpawner" parent="." instance=ExtResource("4_owtfc")]
+position = Vector2(0, 782)
+spawn_time = 2.0
+
+[connection signal="pressed" from="MenuBox/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MenuBox/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="MenuBox/Credits" to="." method="_on_credits_pressed"]

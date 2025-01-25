@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var next_scene: PackedScene
+const GameOverScreen = "res://scripts/game_over_screen.gd"
 
 func _ready() -> void:
 	restart_level()
@@ -11,4 +11,4 @@ func restart_level():
 
 func _process(delta: float) -> void:
 	if GameManager.lives == 0:
-		get_tree().change_scene_to_packed(next_scene)
+		get_tree().change_scene_to_file(GameOverScreen)
