@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://wfscywkwsy1h"]
+[gd_scene load_steps=6 format=3 uid="uid://0o4004ekcnpw"]
 
-[ext_resource type="PackedScene" path="res://scenes/bubble_spawner.tscn" id="1_et4dm"]
-[ext_resource type="PackedScene" path="res://scenes/ui.tscn" id="1_nd7lm"]
-[ext_resource type="PackedScene" path="res://scenes/background.tscn" id="3_0bx8w"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_1e2tr"]
+[ext_resource type="PackedScene" uid="uid://glqk1ykpkthp" path="res://scenes/bubble_spawner.tscn" id="1_et4dm"]
+[ext_resource type="PackedScene" uid="uid://cwrgpavkuqxta" path="res://scenes/ui.tscn" id="1_nd7lm"]
+[ext_resource type="PackedScene" uid="uid://kgy4abekhjv1" path="res://scenes/background.tscn" id="3_0bx8w"]
 [ext_resource type="PackedScene" uid="uid://bvqop3orl2ujv" path="res://scenes/bubble.tscn" id="4_vbpsr"]
 
-[node name="Test2" type="Node2D"]
+[node name="Level" type="Node2D"]
+script = ExtResource("1_1e2tr")
 
 [node name="Background" parent="." instance=ExtResource("3_0bx8w")]
 layer = -100
