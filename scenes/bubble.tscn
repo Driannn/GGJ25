@@ -1,13 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvqop3orl2ujv"]
+[gd_scene load_steps=7 format=3 uid="uid://bvqop3orl2ujv"]
 
-[ext_resource type="Texture2D" uid="uid://bwpmocuidwepn" path="res://z_driann test/icon.svg" id="1_8nfmt"]
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="1_wtqfv"]
+[ext_resource type="Texture2D" uid="uid://byvkb30sosd8r" path="res://assets/burbuja256.png" id="2_f6kta"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8axa4"]
 bounce = 0.32
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nhegk"]
-radius = 91.5478
+radius = 112.634
 
 [sub_resource type="GDScript" id="GDScript_6b68l"]
 script/source = "extends Area2D
@@ -25,24 +25,33 @@ func _on_input_event(viewport, event, shape_idx):
 			
 "
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_y6x2k"]
+radius = 143.286
+
 [node name="bubble" type="RigidBody2D"]
-mass = 1.691
+mass = 14.424
 physics_material_override = SubResource("PhysicsMaterial_8axa4")
-gravity_scale = -0.525
 script = ExtResource("1_wtqfv")
+min_speed = 0.1
+max_speed = 0.15
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-2, -164)
-scale = Vector2(4, 27.3)
+position = Vector2(2, -198.5)
+scale = Vector2(3.6, 23.85)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+scale = Vector2(0.39, 0.39)
 shape = SubResource("CircleShape2D_nhegk")
+debug_color = Color(0.175, 0.7, 0, 0.419608)
 
 [node name="area" type="Area2D" parent="."]
 script = SubResource("GDScript_6b68l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area"]
-shape = SubResource("CircleShape2D_nhegk")
+scale = Vector2(0.39, 0.39)
+shape = SubResource("CircleShape2D_y6x2k")
+debug_color = Color(0.7, 0, 0, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="area"]
-texture = ExtResource("1_8nfmt")
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("2_f6kta")
