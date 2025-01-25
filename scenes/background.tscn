@@ -6,6 +6,7 @@
 [node name="Background" type="CanvasLayer"]
 
 [node name="Parallax2D_BKG" type="Parallax2D" parent="."]
+modulate = Color(0.88, 0.88, 0.88, 1)
 repeat_size = Vector2(405, 720)
 
 [node name="Bkg" type="Sprite2D" parent="Parallax2D_BKG"]
@@ -13,7 +14,7 @@ position = Vector2(202.5, 360)
 texture = ExtResource("1_c0yps")
 
 [node name="Parallax2D_LYR_1" type="Parallax2D" parent="."]
-modulate = Color(1, 0.83, 0.8385, 1)
+modulate = Color(0.86, 0.7138, 0.72111, 1)
 scroll_offset = Vector2(100, 100)
 repeat_size = Vector2(128, 128)
 autoscroll = Vector2(-7, -7)
@@ -25,7 +26,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_75ebk")
 
 [node name="Parallax2D_LYR_2" type="Parallax2D" parent="."]
-modulate = Color(0.43, 0.8955, 1, 0.509804)
+modulate = Color(0.2451, 0.510435, 0.57, 0.509804)
 repeat_size = Vector2(256, 256)
 autoscroll = Vector2(10, -10)
 repeat_times = 10
