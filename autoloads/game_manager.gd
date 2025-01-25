@@ -26,18 +26,19 @@ var colors := [Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW]
 var sequence := []
 var current_step := 0
 
-func _ready():
-	start_new_game()
+#func _ready():
+	#start_new_game()
 
 func start_new_game():
-	score = 0
-	lives = full_lives
-	is_game_over = false
-	
-	escaped = 0
-	sequence = [colors.pick_random()]
-	current_step = 0
-	sequence_updated.emit()
+	pass
+	#score = 0
+	#lives = full_lives
+	#is_game_over = false
+	#
+	#escaped = 0
+	#sequence = [colors.pick_random()]
+	#current_step = 0
+	#sequence_updated.emit()
 
 func add_to_sequence():
 	sequence.append(colors.pick_random())
