@@ -1,10 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvqop3orl2ujv"]
+[gd_scene load_steps=14 format=3 uid="uid://bvqop3orl2ujv"]
 
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="1_wtqfv"]
+[ext_resource type="AudioStream" uid="uid://ctmv7djr8x03y" path="res://assets/audio/sfx/pop-001.wav" id="2_binm6"]
 [ext_resource type="Texture2D" uid="uid://byvkb30sosd8r" path="res://assets/burbuja256.png" id="2_f6kta"]
+[ext_resource type="AudioStream" uid="uid://cd72wplm4kiyy" path="res://assets/audio/sfx/pop-002.wav" id="3_nngrn"]
+[ext_resource type="AudioStream" uid="uid://rm2jia5fpk8e" path="res://assets/audio/sfx/pop-003.wav" id="4_f6k4x"]
+[ext_resource type="AudioStream" uid="uid://cpb6u4edmkrpm" path="res://assets/audio/sfx/pop-004.wav" id="5_lbu2a"]
+[ext_resource type="AudioStream" uid="uid://l8rft05e30mr" path="res://assets/audio/sfx/pop-005.wav" id="6_0niyk"]
+[ext_resource type="AudioStream" uid="uid://c8psii8ondnl0" path="res://assets/audio/sfx/pop-006.wav" id="7_81j1g"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8axa4"]
 bounce = 0.32
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_35bp2"]
+random_volume_offset_db = 3.0
+streams_count = 6
+stream_0/stream = ExtResource("2_binm6")
+stream_1/stream = ExtResource("3_nngrn")
+stream_2/stream = ExtResource("4_f6k4x")
+stream_3/stream = ExtResource("5_lbu2a")
+stream_4/stream = ExtResource("6_0niyk")
+stream_5/stream = ExtResource("7_81j1g")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nhegk"]
 radius = 112.634
@@ -37,6 +53,11 @@ physics_material_override = SubResource("PhysicsMaterial_8axa4")
 script = ExtResource("1_wtqfv")
 min_speed = 0.1
 max_speed = 0.15
+
+[node name="PopSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_35bp2")
+pitch_scale = 0.9
+max_polyphony = 4
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(2, -198.5)

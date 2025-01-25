@@ -7,54 +7,7 @@
 script = ExtResource("1_7dmi2")
 score_label = NodePath("ScoreBox/ScoreNumber")
 lives_label = NodePath("LivesBox/LivesNumber")
-game_over_screen = NodePath("GameOverScreen")
-
-[node name="GameOverScreen" type="Panel" parent="."]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -74.5
-offset_top = -60.0
-offset_right = 74.5
-offset_bottom = 60.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="GameOverScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.5
-offset_top = -31.0
-offset_right = 50.5
-offset_bottom = 31.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GameOver" type="Label" parent="GameOverScreen/VBoxContainer"]
-layout_mode = 2
-text = "GAME OVER"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="GameOverScreen/VBoxContainer"]
-layout_mode = 2
-
-[node name="FinalScoreText" type="Label" parent="GameOverScreen/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "SCORE:"
-
-[node name="FinalScoreNumber" type="Label" parent="GameOverScreen/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "0"
-
-[node name="RestartButton" type="Button" parent="GameOverScreen/VBoxContainer"]
-layout_mode = 2
-text = "RESTART"
+game_over_screen = NodePath("")
 
 [node name="ScoreBox" type="VBoxContainer" parent="."]
 modulate = Color(0, 0, 0, 1)
@@ -113,5 +66,3 @@ expand_mode = 5
 [node name="TextureRect2" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_int13")
-
-[connection signal="pressed" from="GameOverScreen/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]

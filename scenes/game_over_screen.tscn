@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://b40cfa5v0srn6"]
+
+[ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_wuvri"]
+[ext_resource type="PackedScene" uid="uid://dks5m2u7v5rfw" path="res://scenes/level.tscn" id="2_s6l0e"]
+
+[node name="GameOverScreen" type="Node"]
+script = ExtResource("1_wuvri")
+level_scene = ExtResource("2_s6l0e")
+
+[node name="GameOverScreen" type="Panel" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -74.5
+offset_top = -235.0
+offset_right = 74.5
+offset_bottom = -115.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -31.0
+offset_right = 50.5
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOverScreen/VBoxContainer"]
+layout_mode = 2
+
+[node name="FinalScoreText" type="Label" parent="GameOverScreen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "SCORE:"
+
+[node name="FinalScoreNumber" type="Label" parent="GameOverScreen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="RestartButton" type="Button" parent="GameOverScreen/VBoxContainer"]
+layout_mode = 2
+text = "RESTART"
+
+[connection signal="pressed" from="GameOverScreen/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]

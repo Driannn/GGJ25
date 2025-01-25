@@ -1,0 +1,27 @@
+[gd_scene load_steps=9 format=3 uid="uid://cfl1m5llnr8ja"]
+
+[ext_resource type="Script" path="res://autoloads/audio_manager.gd" id="1_lu3ex"]
+[ext_resource type="AudioStream" uid="uid://ctmv7djr8x03y" path="res://assets/audio/sfx/pop-001.wav" id="1_mjbv5"]
+[ext_resource type="AudioStream" uid="uid://cd72wplm4kiyy" path="res://assets/audio/sfx/pop-002.wav" id="2_0tfab"]
+[ext_resource type="AudioStream" uid="uid://rm2jia5fpk8e" path="res://assets/audio/sfx/pop-003.wav" id="3_d28rv"]
+[ext_resource type="AudioStream" uid="uid://cpb6u4edmkrpm" path="res://assets/audio/sfx/pop-004.wav" id="4_ekf41"]
+[ext_resource type="AudioStream" uid="uid://l8rft05e30mr" path="res://assets/audio/sfx/pop-005.wav" id="5_dtxn3"]
+[ext_resource type="AudioStream" uid="uid://c8psii8ondnl0" path="res://assets/audio/sfx/pop-006.wav" id="6_y5iab"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_j1roa"]
+random_volume_offset_db = 3.0
+streams_count = 6
+stream_0/stream = ExtResource("1_mjbv5")
+stream_1/stream = ExtResource("2_0tfab")
+stream_2/stream = ExtResource("3_d28rv")
+stream_3/stream = ExtResource("4_ekf41")
+stream_4/stream = ExtResource("5_dtxn3")
+stream_5/stream = ExtResource("6_y5iab")
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_lu3ex")
+
+[node name="PopSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_j1roa")
+pitch_scale = 0.9
+max_polyphony = 4
