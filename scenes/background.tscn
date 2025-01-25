@@ -1,13 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://in24fma8fwle"]
+[gd_scene load_steps=3 format=3 uid="uid://kgy4abekhjv1"]
 
 [ext_resource type="Texture2D" uid="uid://bpo5fdme23yxs" path="res://assets/fondo.png" id="1_6l5fr"]
+[ext_resource type="Texture2D" uid="uid://b2fjecxn3h1km" path="res://assets/fondo2.png" id="2_75ebk"]
 
 [node name="Background" type="CanvasLayer"]
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
+[node name="Parallax2D_BKG" type="Parallax2D" parent="."]
+modulate = Color(0.27, 1, 0.866167, 1)
 repeat_size = Vector2(256, 256)
 autoscroll = Vector2(0, -5)
 repeat_times = 10
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D_BKG"]
 texture = ExtResource("1_6l5fr")
+
+[node name="Parallax2D_LYR_1" type="Parallax2D" parent="."]
+modulate = Color(0, 0.89, 0.6675, 0.831373)
+scroll_offset = Vector2(100, 100)
+repeat_size = Vector2(128, 128)
+autoscroll = Vector2(-7, -7)
+repeat_times = 10
+
+[node name="Fondo2" type="Sprite2D" parent="Parallax2D_LYR_1"]
+position = Vector2(3, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_75ebk")
+
+[node name="Parallax2D_LYR_2" type="Parallax2D" parent="."]
+modulate = Color(1, 1, 1, 0.831373)
+repeat_size = Vector2(256, 256)
+autoscroll = Vector2(10, -10)
+repeat_times = 10
+
+[node name="Fondo2" type="Sprite2D" parent="Parallax2D_LYR_2"]
+position = Vector2(3, 0)
+texture = ExtResource("2_75ebk")
