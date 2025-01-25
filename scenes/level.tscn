@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dks5m2u7v5rfw"]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_1sp4q"]
+[ext_resource type="PackedScene" uid="uid://kgy4abekhjv1" path="res://scenes/background.tscn" id="2_sj0by"]
+[ext_resource type="PackedScene" uid="uid://cwrgpavkuqxta" path="res://scenes/ui.tscn" id="3_s07ar"]
+[ext_resource type="PackedScene" uid="uid://glqk1ykpkthp" path="res://scenes/bubble_spawner.tscn" id="4_kgni4"]
+[ext_resource type="PackedScene" uid="uid://bvqop3orl2ujv" path="res://scenes/bubble.tscn" id="5_k7cvv"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_1sp4q")
+
+[node name="Background" parent="." instance=ExtResource("2_sj0by")]
+layer = -100
+
+[node name="UI" parent="." instance=ExtResource("3_s07ar")]
+
+[node name="BubbleSpawner" parent="." instance=ExtResource("4_kgni4")]
+position = Vector2(0, 868)
+
+[node name="bubble" parent="." instance=ExtResource("5_k7cvv")]
+modulate = Color(0.116667, 1, 0, 0.47451)
+position = Vector2(326, 567)
+
+[node name="bubble2" parent="." instance=ExtResource("5_k7cvv")]
+modulate = Color(1, 0.883333, 0, 0.415686)
+position = Vector2(173, 566)
