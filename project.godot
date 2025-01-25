@@ -18,6 +18,12 @@ config/icon="res://icon.svg"
 
 GameManager="*res://autoloads/game_manager.gd"
 
+[display]
+
+window/size/viewport_width=405
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg", "res://addons/script-ide/plugin.cfg")
