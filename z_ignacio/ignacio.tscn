@@ -7,10 +7,14 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="RigidBody2D" parent="." instance=ExtResource("1_mfqf6")]
-position = Vector2(-63, 270)
+position = Vector2(147, 544)
+min_speed = 0.0
+max_speed = 0.0
 
 [node name="RigidBody2D2" parent="." instance=ExtResource("1_mfqf6")]
-position = Vector2(151, 0)
+position = Vector2(287, 568)
+min_speed = 0.0
+max_speed = 0.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-16, 268)
