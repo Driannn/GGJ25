@@ -1,13 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dks5m2u7v5rfw"]
+[gd_scene load_steps=8 format=3 uid="uid://dks5m2u7v5rfw"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_1sp4q"]
+[ext_resource type="PackedScene" uid="uid://b40cfa5v0srn6" path="res://scenes/game_over_screen.tscn" id="2_4gfb7"]
 [ext_resource type="PackedScene" uid="uid://kgy4abekhjv1" path="res://scenes/background.tscn" id="2_sj0by"]
 [ext_resource type="PackedScene" uid="uid://cwrgpavkuqxta" path="res://scenes/ui.tscn" id="3_s07ar"]
 [ext_resource type="PackedScene" uid="uid://glqk1ykpkthp" path="res://scenes/bubble_spawner.tscn" id="4_kgni4"]
 [ext_resource type="PackedScene" uid="uid://bvqop3orl2ujv" path="res://scenes/bubble.tscn" id="5_k7cvv"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f68vk"]
+
 [node name="Level" type="Node2D"]
 script = ExtResource("1_1sp4q")
+next_scene = ExtResource("2_4gfb7")
 
 [node name="Background" parent="." instance=ExtResource("2_sj0by")]
 layer = -100
@@ -24,3 +28,17 @@ position = Vector2(326, 567)
 [node name="bubble2" parent="." instance=ExtResource("5_k7cvv")]
 modulate = Color(1, 0.883333, 0, 0.415686)
 position = Vector2(173, 566)
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(-18, 389)
+rotation = 1.57079
+shape = SubResource("WorldBoundaryShape2D_f68vk")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(420, 389)
+rotation = -1.57079
+shape = SubResource("WorldBoundaryShape2D_f68vk")

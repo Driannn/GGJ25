@@ -2,6 +2,7 @@ extends RigidBody2D
 
 @export var min_speed: float
 @export var max_speed: float
+@onready var pop_sound: AudioStreamPlayer = $PopSound
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,6 +15,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_on_pop() -> void:
+	AudioManager.play_pop()
 	if GameManager.is_game_over:
 		return
 	GameManager.score += 1
