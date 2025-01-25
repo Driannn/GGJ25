@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://bvqop3orl2ujv"]
 
-[ext_resource type="Texture2D" uid="uid://bwpmocuidwepn" path="res://z_driann test/icon.svg" id="1_8nfmt"]
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="1_wtqfv"]
+[ext_resource type="Texture2D" uid="uid://byvkb30sosd8r" path="res://assets/burbuja256.png" id="2_f6kta"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8axa4"]
 bounce = 0.32
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nhegk"]
-radius = 91.5478
+radius = 38.3275
 
 [sub_resource type="GDScript" id="GDScript_6b68l"]
 script/source = "extends Area2D
@@ -32,8 +32,8 @@ gravity_scale = -0.525
 script = ExtResource("1_wtqfv")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-2, -164)
-scale = Vector2(4, 27.3)
+position = Vector2(-2, -176)
+scale = Vector2(4, 26.1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_nhegk")
@@ -45,4 +45,5 @@ script = SubResource("GDScript_6b68l")
 shape = SubResource("CircleShape2D_nhegk")
 
 [node name="Sprite2D" type="Sprite2D" parent="area"]
-texture = ExtResource("1_8nfmt")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_f6kta")

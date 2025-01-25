@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://0o4004ekcnpw"]
+
+[ext_resource type="PackedScene" uid="uid://glqk1ykpkthp" path="res://scenes/bubble_spawner.tscn" id="1_et4dm"]
+[ext_resource type="PackedScene" uid="uid://cwrgpavkuqxta" path="res://scenes/ui.tscn" id="1_nd7lm"]
+[ext_resource type="PackedScene" uid="uid://kgy4abekhjv1" path="res://scenes/background.tscn" id="3_0bx8w"]
+
+[node name="Test2" type="Node2D"]
+
+[node name="BubbleSpawner" parent="." instance=ExtResource("1_et4dm")]
+
+[node name="UI" parent="." instance=ExtResource("1_nd7lm")]
+
+[node name="Background" parent="." instance=ExtResource("3_0bx8w")]
