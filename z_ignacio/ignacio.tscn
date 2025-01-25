@@ -7,7 +7,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="RigidBody2D" parent="." instance=ExtResource("1_mfqf6")]
-position = Vector2(-101, 0)
+position = Vector2(-63, 270)
 
 [node name="RigidBody2D2" parent="." instance=ExtResource("1_mfqf6")]
 position = Vector2(151, 0)

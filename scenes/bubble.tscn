@@ -31,17 +31,18 @@ physics_material_override = SubResource("PhysicsMaterial_8axa4")
 gravity_scale = -0.525
 script = ExtResource("1_wtqfv")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-2, -164)
+scale = Vector2(4, 27.3)
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(176, 598)
 shape = SubResource("CircleShape2D_nhegk")
 
 [node name="area" type="Area2D" parent="."]
 script = SubResource("GDScript_6b68l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area"]
-position = Vector2(176, 598)
 shape = SubResource("CircleShape2D_nhegk")
 
 [node name="Sprite2D" type="Sprite2D" parent="area"]
-position = Vector2(176, 598)
 texture = ExtResource("1_8nfmt")
