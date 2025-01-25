@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://in24fma8fwle"]
+
+[ext_resource type="Texture2D" uid="uid://bpo5fdme23yxs" path="res://assets/fondo.png" id="1_6l5fr"]
+
+[node name="Background" type="CanvasLayer"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(256, 256)
+autoscroll = Vector2(0, -5)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("1_6l5fr")
