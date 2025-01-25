@@ -12,6 +12,8 @@ radius = 112.634
 [sub_resource type="GDScript" id="GDScript_6b68l"]
 script/source = "extends Area2D
 
+signal on_pop
+
 func _ready():
 	# Conectar la señal al script (Godot 4)
 	input_event.connect(_on_input_event)
@@ -21,6 +23,7 @@ func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		# Detectar clic izquierdo presionado
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			emit_signal(\"on_pop\")
 			get_parent().queue_free()  # Eliminar el nodo
 			
 "
@@ -55,3 +58,6 @@ debug_color = Color(0.7, 0, 0, 0.419608)
 [node name="Sprite2D" type="Sprite2D" parent="area"]
 scale = Vector2(0.39, 0.39)
 texture = ExtResource("2_f6kta")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="on_pop" from="area" to="." method="_on_area_on_pop"]

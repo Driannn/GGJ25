@@ -5,11 +5,17 @@ signal sequence_updated
 signal game_over
 signal score_updated
 
+var is_game_over
+
 var score := 0:
 	set(value):
 		score = value
 		score_updated.emit(value)
 		
+
+var full_lives: int = 5
+var lives: int
+
 var escaped := 0:
 	set(value):
 		escaped = value
@@ -25,6 +31,9 @@ func _ready():
 
 func start_new_game():
 	score = 0
+	lives = full_lives
+	is_game_over = false
+	
 	escaped = 0
 	sequence = [colors.pick_random()]
 	current_step = 0
