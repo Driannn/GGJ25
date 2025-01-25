@@ -33,9 +33,12 @@ enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg", "res://addons/
 
 folder_colors={
 "res://addons/": "gray",
+"res://assets/": "orange",
 "res://autoloads/": "blue",
 "res://scenes/": "purple",
-"res://z_driann test/": "gray"
+"res://scripts/": "green",
+"res://z_driann test/": "gray",
+"res://z_ignacio/": "gray"
 }
 
 [rendering]
