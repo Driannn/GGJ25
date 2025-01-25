@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqgoru1pdrk1v"]
+
+[ext_resource type="PackedScene" uid="uid://bvqop3orl2ujv" path="res://scenes/bubble.tscn" id="1_mfqf6"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ybw0r"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("1_mfqf6")]
+position = Vector2(-101, 0)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("1_mfqf6")]
+position = Vector2(151, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-16, 268)
+rotation = 1.57079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_ybw0r")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D"]
+position = Vector2(26.001, -435)
+rotation = 3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_ybw0r")

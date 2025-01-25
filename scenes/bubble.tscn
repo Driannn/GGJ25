@@ -1,4 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvqop3orl2ujv"]
+[gd_scene load_steps=6 format=3 uid="uid://bvqop3orl2ujv"]
+
+[ext_resource type="Texture2D" uid="uid://bwpmocuidwepn" path="res://z_driann test/icon.svg" id="1_8nfmt"]
+[ext_resource type="Script" path="res://scripts/bubble.gd" id="1_wtqfv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8axa4"]
+bounce = 0.32
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nhegk"]
+radius = 91.5478
 
 [sub_resource type="GDScript" id="GDScript_6b68l"]
 script/source = "extends Area2D
@@ -6,20 +15,33 @@ script/source = "extends Area2D
 func _ready():
 	# Conectar la señal al script (Godot 4)
 	input_event.connect(_on_input_event)
+	
 
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		# Detectar clic izquierdo presionado
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			queue_free()  # Eliminar el nodo
+			get_parent().queue_free()  # Eliminar el nodo
 			
 "
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nhegk"]
-radius = 173.566
+[node name="bubble" type="RigidBody2D"]
+mass = 1.691
+physics_material_override = SubResource("PhysicsMaterial_8axa4")
+gravity_scale = -0.525
+script = ExtResource("1_wtqfv")
 
-[node name="Bubble" type="Area2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(176, 598)
+shape = SubResource("CircleShape2D_nhegk")
+
+[node name="area" type="Area2D" parent="."]
 script = SubResource("GDScript_6b68l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area"]
+position = Vector2(176, 598)
 shape = SubResource("CircleShape2D_nhegk")
+
+[node name="Sprite2D" type="Sprite2D" parent="area"]
+position = Vector2(176, 598)
+texture = ExtResource("1_8nfmt")

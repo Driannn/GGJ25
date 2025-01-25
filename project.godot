@@ -13,7 +13,7 @@ config_version=5
 config/name="GGJ25_PopItUp"
 run/main_scene="res://z_driann test/playground.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://z_driann test/icon.svg"
 
 [autoload]
 
