@@ -40,3 +40,15 @@ shape = SubResource("WorldBoundaryShape2D_f68vk")
 position = Vector2(420, 389)
 rotation = -1.57079
 shape = SubResource("WorldBoundaryShape2D_f68vk")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(574, 611)
+rotation = -0.55896
+scale = Vector2(-7.39338, -4.56431)
+color = Color(0.67, 0.67, 0.67, 1)
+energy = 2.87
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.666667)
+shadow_filter = 1
+shadow_filter_smooth = 42.0
+height = 0.15
