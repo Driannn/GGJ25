@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwrgpavkuqxta"]
+[gd_scene load_steps=8 format=3 uid="uid://cwrgpavkuqxta"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_7dmi2"]
 [ext_resource type="Texture2D" uid="uid://bwpmocuidwepn" path="res://z_driann test/icon.svg" id="1_int13"]
 [ext_resource type="LabelSettings" uid="uid://bfp3w6mpuxcwv" path="res://resources/label_settings.tres" id="2_jm6if"]
 [ext_resource type="Texture2D" uid="uid://3q12jp1h3asf" path="res://assets/nice.png" id="4_hx5jh"]
 [ext_resource type="Script" path="res://scripts/nice_message.gd" id="4_twi1w"]
+[ext_resource type="Script" path="res://scripts/sequence_hint.gd" id="6_akjsf"]
+[ext_resource type="Texture2D" uid="uid://byvkb30sosd8r" path="res://assets/burbuja256.png" id="7_46du0"]
 
 [node name="UI" type="CanvasLayer" node_paths=PackedStringArray("score_label", "lives_label")]
 script = ExtResource("1_7dmi2")
@@ -95,3 +97,73 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.381291, 0.381291)
 texture = ExtResource("4_hx5jh")
+
+[node name="sequenceHint" type="Control" parent="Control"]
+modulate = Color(1, 1, 1, 0.619608)
+anchors_preset = 0
+offset_left = 340.0
+offset_top = 102.0
+offset_right = 380.0
+offset_bottom = 142.0
+scale = Vector2(0.892895, 0.892895)
+script = ExtResource("6_akjsf")
+hintBubbles = [1, 2, null]
+
+[node name="TextureRect" type="TextureRect" parent="Control/sequenceHint"]
+modulate = Color(0.376471, 1, 0.168627, 0.701961)
+layout_mode = 0
+offset_left = -7.0
+offset_top = -15.0
+offset_right = 249.0
+offset_bottom = 241.0
+scale = Vector2(0.182313, 0.182313)
+texture = ExtResource("7_46du0")
+
+[node name="TextureRect2" type="TextureRect" parent="Control/sequenceHint"]
+modulate = Color(1, 0.843137, 0.211765, 0.760784)
+offset_left = 6.0
+offset_top = 35.0
+offset_right = 262.0
+offset_bottom = 291.0
+scale = Vector2(0.182313, 0.182313)
+texture = ExtResource("7_46du0")
+
+[node name="TextureRect3" type="TextureRect" parent="Control/sequenceHint"]
+modulate = Color(0.129412, 0.305882, 1, 0.741176)
+offset_left = -4.0
+offset_top = 83.0
+offset_right = 252.0
+offset_bottom = 339.0
+scale = Vector2(0.182313, 0.182313)
+texture = ExtResource("7_46du0")
+
+[node name="Label" type="Label" parent="Control/sequenceHint"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -8.0
+offset_right = 50.0
+offset_bottom = 15.0
+scale = Vector2(1.76441, 1.54927)
+text = "1
+"
+label_settings = ExtResource("2_jm6if")
+
+[node name="Label2" type="Label" parent="Control/sequenceHint"]
+offset_left = 22.0
+offset_top = 43.0
+offset_right = 62.0
+offset_bottom = 66.0
+scale = Vector2(1.76441, 1.54927)
+text = "2
+"
+label_settings = ExtResource("2_jm6if")
+
+[node name="Label3" type="Label" parent="Control/sequenceHint"]
+offset_left = 11.0
+offset_top = 91.0
+offset_right = 51.0
+offset_bottom = 114.0
+scale = Vector2(1.76441, 1.54927)
+text = "3
+"
+label_settings = ExtResource("2_jm6if")
