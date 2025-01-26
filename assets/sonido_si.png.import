@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp56cpbkbafkn"
-path="res://.godot/imported/sonido_no.png-475a009f25e7b5d42efc8457cb8604b7.ctex"
+uid="uid://prlmok0at3r"
+path="res://.godot/imported/sonido_si.png-5b7eb1f99d82b3d509cacffd38607b62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://z_driann test/sonido_no.png"
-dest_files=["res://.godot/imported/sonido_no.png-475a009f25e7b5d42efc8457cb8604b7.ctex"]
+source_file="res://assets/sonido_si.png"
+dest_files=["res://.godot/imported/sonido_si.png-5b7eb1f99d82b3d509cacffd38607b62.ctex"]
 
 [params]
 

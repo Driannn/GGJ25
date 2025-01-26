@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var time: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,7 +10,7 @@ func _ready() -> void:
 
 func _on_combo_success():
 	visible = true
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.8).timeout
 	visible = false
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -22,7 +22,16 @@ var score := 0:
 var full_lives: int = 5
 var lives: int
 
+var high_score: int = 0
+
 var current_step := 0
+
+var save_path = "user://score.save"
+
+func save_score():
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(high_score)
+
 
 #func _ready():
 	#start_new_game()
