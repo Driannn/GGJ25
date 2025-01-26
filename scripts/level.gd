@@ -1,6 +1,6 @@
 extends Node2D
 
-const GameOverScreen = "res://scenes/credits.tscn"
+const GameOverScreen = "res://scenes/game_over_screen.tscn"
 func _ready() -> void:
 	restart_level()
 

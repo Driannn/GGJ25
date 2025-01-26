@@ -17,7 +17,7 @@ config/icon="res://z_driann test/icon.svg"
 
 [autoload]
 
-GameManager="*res://autoloads/game_manager.gd"
+GameManager="*res://autoloads/game_manager.tscn"
 AudioManager="*res://autoloads/audio_manager.tscn"
 
 [display]
