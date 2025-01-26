@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://wfscywkwsy1h"]
+[gd_scene load_steps=6 format=3 uid="uid://0o4004ekcnpw"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_1e2tr"]
 [ext_resource type="PackedScene" uid="uid://glqk1ykpkthp" path="res://scenes/bubble_spawner.tscn" id="1_et4dm"]
