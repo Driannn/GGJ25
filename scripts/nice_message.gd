@@ -10,6 +10,7 @@ func _ready() -> void:
 
 func _on_combo_success():
 	visible = true
+	AudioManager.play_nice()
 	await get_tree().create_timer(0.8).timeout
 	visible = false
 	
