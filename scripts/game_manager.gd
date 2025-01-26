@@ -4,6 +4,7 @@ extends Node
 signal sequence_updated
 signal game_over
 signal score_updated
+signal combo_success
 
 @export var colors: Array[Color]
 
@@ -49,6 +50,7 @@ func on_color_pop(color):
 		if current_step >= sequence.size():
 			current_step = 0
 			score += 9
+			emit_signal('combo_success')
 			print('NICE MOVE! completed sequence')			
 	else:
 		print('Reseted sequence, you failed')
