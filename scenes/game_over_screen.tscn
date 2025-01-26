@@ -1,14 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://dor4ciwjgg5m6"]
+[gd_scene load_steps=7 format=3 uid="uid://dor4ciwjgg5m6"]
 
 [ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_wuvri"]
 [ext_resource type="PackedScene" uid="uid://dks5m2u7v5rfw" path="res://scenes/level.tscn" id="2_s6l0e"]
-[ext_resource type="Texture2D" uid="uid://b6afpe0h8gh5t" path="res://scripts/game over.png" id="3_a3e8s"]
-[ext_resource type="LabelSettings" uid="uid://bfp3w6mpuxcwv" path="res://resources/label_settings.tres" id="4_gd3k4"]
+[ext_resource type="Texture2D" uid="uid://b58j80jewd51h" path="res://assets/game over.png" id="3_y0mmo"]
 [ext_resource type="FontFile" uid="uid://buo44i8ghedxp" path="res://assets/fonts/static/Montserrat-Bold.ttf" id="5_c53et"]
 
-[node name="GameOverScreen" type="Node"]
+[sub_resource type="LabelSettings" id="LabelSettings_gmy1l"]
+font = ExtResource("5_c53et")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wh2g2"]
+font = ExtResource("5_c53et")
+
+[node name="GameOverScreen" type="Node" node_paths=PackedStringArray("score_label")]
 script = ExtResource("1_wuvri")
 level_scene = ExtResource("2_s6l0e")
+score_label = NodePath("GameOverScreen/VBoxContainer/HBoxContainer/FinalScoreNumber")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -16,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_a3e8s")
+texture = ExtResource("3_y0mmo")
 expand_mode = 1
 stretch_mode = 1
 
@@ -54,11 +60,12 @@ alignment = 1
 [node name="FinalScoreText" type="Label" parent="GameOverScreen/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "SCORE:"
-label_settings = ExtResource("4_gd3k4")
+label_settings = SubResource("LabelSettings_gmy1l")
 
 [node name="FinalScoreNumber" type="Label" parent="GameOverScreen/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "0"
+label_settings = SubResource("LabelSettings_wh2g2")
 
 [node name="RestartButton" type="Button" parent="GameOverScreen/VBoxContainer"]
 layout_mode = 2

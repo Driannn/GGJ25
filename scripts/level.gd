@@ -8,6 +8,6 @@ func restart_level():
 	GameManager.score = 0
 	GameManager.lives = GameManager.full_lives
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if GameManager.lives == 0:
 		get_tree().change_scene_to_file(GameOverScreen)

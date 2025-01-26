@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://d4ef4roeidf4c"]
 
-[ext_resource type="Script" path="res://autoloads/audio_manager.gd" id="1_lu3ex"]
+[ext_resource type="Script" path="res://scripts/audio_manager.gd" id="1_lu3ex"]
 [ext_resource type="AudioStream" uid="uid://ctmv7djr8x03y" path="res://assets/audio/sfx/pop-001.wav" id="1_mjbv5"]
 [ext_resource type="AudioStream" uid="uid://cd72wplm4kiyy" path="res://assets/audio/sfx/pop-002.wav" id="2_0tfab"]
 [ext_resource type="AudioStream" uid="uid://djjeomltrxasa" path="res://assets/audio/music/Island theme v2.wav" id="2_7p2fc"]
@@ -31,3 +31,4 @@ playback_type = 2
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_7p2fc")
 autoplay = true
+playback_type = 2

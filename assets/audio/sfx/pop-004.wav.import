@@ -12,13 +12,13 @@ dest_files=["res://.godot/imported/pop-004.wav-15dd614dcd4528d6b45d86606e3e846f.
 
 [params]
 
-force/8_bit=false
-force/mono=false
-force/max_rate=false
-force/max_rate_hz=44100
-edit/trim=false
+force/8_bit=true
+force/mono=true
+force/max_rate=true
+force/max_rate_hz=38000.0
+edit/trim=true
 edit/normalize=false
 edit/loop_mode=0
 edit/loop_begin=0
 edit/loop_end=-1
-compress/mode=0
+compress/mode=2

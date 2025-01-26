@@ -1,82 +1,76 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwrgpavkuqxta"]
+[gd_scene load_steps=3 format=3 uid="uid://cwrgpavkuqxta"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_7dmi2"]
-[ext_resource type="Texture2D" uid="uid://bwpmocuidwepn" path="res://z_driann test/icon.svg" id="1_int13"]
 [ext_resource type="LabelSettings" uid="uid://bfp3w6mpuxcwv" path="res://resources/label_settings.tres" id="2_jm6if"]
 
 [node name="UI" type="CanvasLayer" node_paths=PackedStringArray("score_label", "lives_label")]
 script = ExtResource("1_7dmi2")
-score_label = NodePath("Control/ScoreBox/ScoreNumber")
-lives_label = NodePath("Control/LivesBox/LivesNumber")
+score_label = NodePath("ScoreBox/ScoreNumber")
+lives_label = NodePath("LivesBox/LivesNumber")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ScoreBox" type="VBoxContainer" parent="Control"]
+[node name="ScoreBox" type="VBoxContainer" parent="."]
 modulate = Color(0, 0, 0, 1)
 offset_left = 20.0
 offset_top = 20.0
-offset_right = 71.0
+offset_right = 78.0
 offset_bottom = 70.0
 
-[node name="ScoreText" type="Label" parent="Control/ScoreBox"]
+[node name="ScoreText" type="Label" parent="ScoreBox"]
 layout_mode = 2
 text = "SCORE"
 label_settings = ExtResource("2_jm6if")
 horizontal_alignment = 1
 
-[node name="ScoreNumber" type="Label" parent="Control/ScoreBox"]
+[node name="ScoreNumber" type="Label" parent="ScoreBox"]
 layout_mode = 2
 text = "0"
 label_settings = ExtResource("2_jm6if")
 horizontal_alignment = 1
 
-[node name="LivesBox" type="VBoxContainer" parent="Control"]
+[node name="LivesBox" type="VBoxContainer" parent="."]
 modulate = Color(0, 0, 0, 1)
-layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 294.0
+offset_left = -71.0
 offset_top = 20.0
-offset_right = 345.0
+offset_right = -20.0
 offset_bottom = 70.0
 grow_horizontal = 0
 
-[node name="LivesText" type="Label" parent="Control/LivesBox"]
+[node name="LivesText" type="Label" parent="LivesBox"]
 layout_mode = 2
 text = "LIVES"
 label_settings = ExtResource("2_jm6if")
 horizontal_alignment = 1
 
-[node name="LivesNumber" type="Label" parent="Control/LivesBox"]
+[node name="LivesNumber" type="Label" parent="LivesBox"]
 layout_mode = 2
 text = "0"
 label_settings = ExtResource("2_jm6if")
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-visible = false
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 237.0
-offset_right = 365.0
-offset_bottom = 92.0
-grow_horizontal = 0
-grow_vertical = 2
-alignment = 2
+[node name="HighScore" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 20)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 20.0
+offset_right = 48.0
+offset_bottom = 70.0
+grow_horizontal = 2
+alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer"]
+[node name="HighScoreText" type="Label" parent="HighScore"]
 layout_mode = 2
-texture = ExtResource("1_int13")
-expand_mode = 5
+text = "HIGH SCORE"
+label_settings = ExtResource("2_jm6if")
+horizontal_alignment = 1
 
-[node name="TextureRect2" type="TextureRect" parent="Control/VBoxContainer"]
+[node name="HighScoreNumber" type="Label" parent="HighScore"]
 layout_mode = 2
-texture = ExtResource("1_int13")
+text = "0
+"
+label_settings = ExtResource("2_jm6if")
+horizontal_alignment = 1
