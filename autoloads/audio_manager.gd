@@ -1,7 +1,10 @@
 extends Node
 
+#@export var pop_sound: AudioStreamPlayer
+
 @onready var pop_sound: AudioStreamPlayer = %PopSound
 
 func play_pop():
-	pop_sound.play()
+	if pop_sound != null:
+		pop_sound.play()
  

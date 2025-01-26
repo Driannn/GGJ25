@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dks5m2u7v5rfw"]
+[gd_scene load_steps=7 format=3 uid="uid://dks5m2u7v5rfw"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_1sp4q"]
-[ext_resource type="PackedScene" uid="uid://dor4ciwjgg5m6" path="res://scenes/game_over_screen.tscn" id="2_4gfb7"]
 [ext_resource type="PackedScene" uid="uid://kgy4abekhjv1" path="res://scenes/background.tscn" id="2_sj0by"]
 [ext_resource type="PackedScene" uid="uid://cwrgpavkuqxta" path="res://scenes/ui.tscn" id="3_s07ar"]
 [ext_resource type="PackedScene" uid="uid://glqk1ykpkthp" path="res://scenes/bubble_spawner.tscn" id="4_kgni4"]
@@ -11,7 +10,6 @@
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_1sp4q")
-next_scene = ExtResource("2_4gfb7")
 
 [node name="Background" parent="." instance=ExtResource("2_sj0by")]
 layer = -100

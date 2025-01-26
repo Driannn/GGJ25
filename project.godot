@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="GGJ25_PopItUp"
-run/main_scene="res://z_driann test/playground.tscn"
+run/main_scene="res://scenes/level.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://z_driann test/icon.svg"
 
 [autoload]
 
 GameManager="*res://autoloads/game_manager.gd"
-AudioManager="*res://autoloads/audio_manager.gd"
+AudioManager="*res://autoloads/audio_manager.tscn"
 
 [display]
 
