@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwrgpavkuqxta"]
+[gd_scene load_steps=7 format=3 uid="uid://cwrgpavkuqxta"]
 
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_7dmi2"]
 [ext_resource type="LabelSettings" uid="uid://bfp3w6mpuxcwv" path="res://resources/label_settings.tres" id="2_jm6if"]
@@ -95,71 +95,75 @@ rotation = -0.261799
 scale = Vector2(0.381291, 0.381291)
 texture = ExtResource("4_hx5jh")
 
-[node name="sequenceHint" type="Control" parent="Control"]
+[node name="Control#sequenceHint" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0.619608)
-anchors_preset = 0
-offset_left = 340.0
-offset_top = 102.0
-offset_right = 380.0
-offset_bottom = 142.0
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
 scale = Vector2(0.892895, 0.892895)
 script = ExtResource("6_akjsf")
 hintBubbles = [1, 2, null]
 
-[node name="TextureRect" type="TextureRect" parent="Control/sequenceHint"]
+[node name="Control_sequenceHint#TextureRect" type="TextureRect" parent="Control#sequenceHint"]
 modulate = Color(0.376471, 1, 0.168627, 0.701961)
-layout_mode = 0
-offset_left = -7.0
-offset_top = -15.0
-offset_right = 249.0
-offset_bottom = 241.0
+offset_left = -26.8789
+offset_top = -264.309
+offset_right = 229.121
+offset_bottom = -8.30878
 scale = Vector2(0.182313, 0.182313)
 texture = ExtResource("7_46du0")
 
-[node name="TextureRect2" type="TextureRect" parent="Control/sequenceHint"]
+[node name="Control_sequenceHint#TextureRect2" type="TextureRect" parent="Control#sequenceHint"]
 modulate = Color(1, 0.843137, 0.211765, 0.760784)
-offset_left = 6.0
-offset_top = 35.0
-offset_right = 262.0
-offset_bottom = 291.0
+offset_left = -12.3195
+offset_top = -208.311
+offset_right = 243.68
+offset_bottom = 47.6888
 scale = Vector2(0.182313, 0.182313)
 texture = ExtResource("7_46du0")
 
-[node name="TextureRect3" type="TextureRect" parent="Control/sequenceHint"]
+[node name="Control_sequenceHint#TextureRect3" type="TextureRect" parent="Control#sequenceHint"]
 modulate = Color(0.129412, 0.305882, 1, 0.741176)
-offset_left = -4.0
-offset_top = 83.0
-offset_right = 252.0
-offset_bottom = 339.0
+offset_left = -23.519
+offset_top = -154.553
+offset_right = 232.481
+offset_bottom = 101.447
 scale = Vector2(0.182313, 0.182313)
 texture = ExtResource("7_46du0")
 
-[node name="Label" type="Label" parent="Control/sequenceHint"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = -8.0
-offset_right = 50.0
-offset_bottom = 15.0
+[node name="Control_sequenceHint#Label" type="Label" parent="Control#sequenceHint"]
+offset_left = -7.83972
+offset_top = -256.469
+offset_right = 32.1603
+offset_bottom = -233.469
 scale = Vector2(1.76441, 1.54927)
 text = "1
 "
 label_settings = ExtResource("2_jm6if")
 
-[node name="Label2" type="Label" parent="Control/sequenceHint"]
-offset_left = 22.0
-offset_top = 43.0
-offset_right = 62.0
-offset_bottom = 66.0
+[node name="Control_sequenceHint#Label2" type="Label" parent="Control#sequenceHint"]
+offset_left = 5.5997
+offset_top = -199.352
+offset_right = 45.5997
+offset_bottom = -176.352
 scale = Vector2(1.76441, 1.54927)
 text = "2
 "
 label_settings = ExtResource("2_jm6if")
 
-[node name="Label3" type="Label" parent="Control/sequenceHint"]
-offset_left = 11.0
-offset_top = 91.0
-offset_right = 51.0
-offset_bottom = 114.0
+[node name="Control_sequenceHint#Label3" type="Label" parent="Control#sequenceHint"]
+offset_left = -6.71976
+offset_top = -145.594
+offset_right = 33.2802
+offset_bottom = -122.594
 scale = Vector2(1.76441, 1.54927)
 text = "3
 "

@@ -27,7 +27,6 @@ var high_score: int = 0
 var current_step := 0
 
 var save_path = "user://score.save"
-
 func save_score():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(high_score)
@@ -58,7 +57,7 @@ func on_color_pop(color):
 		current_step += 1
 		if current_step >= sequence.size():
 			current_step = 0
-			score += 9
+			score += 24
 			emit_signal('combo_success')
 			print('NICE MOVE! completed sequence')			
 	else:
