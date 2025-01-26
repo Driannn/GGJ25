@@ -3,10 +3,8 @@
 [ext_resource type="Script" path="res://scripts/ui.gd" id="1_7dmi2"]
 [ext_resource type="LabelSettings" uid="uid://bfp3w6mpuxcwv" path="res://resources/label_settings.tres" id="2_jm6if"]
 
-[node name="UI" type="CanvasLayer" node_paths=PackedStringArray("score_label", "lives_label")]
+[node name="UI" type="CanvasLayer"]
 script = ExtResource("1_7dmi2")
-score_label = NodePath("ScoreBox/ScoreNumber")
-lives_label = NodePath("LivesBox/LivesNumber")
 
 [node name="ScoreBox" type="VBoxContainer" parent="."]
 modulate = Color(0, 0, 0, 1)

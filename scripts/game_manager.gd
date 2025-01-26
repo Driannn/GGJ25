@@ -9,6 +9,8 @@ signal score_updated
 
 @onready var sequence = [colors[0],colors[1],colors[2]]
 
+
+
 var is_game_over
 
 var score := 0:
