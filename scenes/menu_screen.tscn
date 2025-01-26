@@ -1,14 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cu2v781qqxgaw"]
+[gd_scene load_steps=7 format=3 uid="uid://cu2v781qqxgaw"]
 
 [ext_resource type="Script" path="res://scripts/menu_screen.gd" id="1_mnfri"]
+[ext_resource type="PackedScene" uid="uid://kgy4abekhjv1" path="res://scenes/background.tscn" id="2_7f5hi"]
 [ext_resource type="Texture2D" uid="uid://ca1d1b2p7gmux" path="res://assets/BKG.png" id="2_bl4t2"]
 [ext_resource type="Texture2D" uid="uid://bkdveeredabcc" path="res://assets/Illustration21.png" id="3_xy5p6"]
 [ext_resource type="PackedScene" uid="uid://glqk1ykpkthp" path="res://scenes/bubble_spawner.tscn" id="4_owtfc"]
+[ext_resource type="FontFile" uid="uid://buo44i8ghedxp" path="res://assets/fonts/static/Montserrat-Bold.ttf" id="5_pqw3u"]
 
 [node name="MenuScreen" type="CanvasLayer"]
 script = ExtResource("1_mnfri")
 
+[node name="Background" parent="." instance=ExtResource("2_7f5hi")]
+layer = -3
+
 [node name="Gradient" type="TextureRect" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -39,14 +45,17 @@ grow_vertical = 0
 
 [node name="Play" type="Button" parent="MenuBox"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("5_pqw3u")
 text = "PLAY"
 
 [node name="Tutorial" type="Button" parent="MenuBox"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("5_pqw3u")
 text = "TUTORIAL"
 
 [node name="Credits" type="Button" parent="MenuBox"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("5_pqw3u")
 text = "CREDITS"
 
 [node name="BubbleSpawner" parent="." instance=ExtResource("4_owtfc")]

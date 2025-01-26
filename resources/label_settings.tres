@@ -1,0 +1,6 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bfp3w6mpuxcwv"]
+
+[ext_resource type="FontFile" uid="uid://buo44i8ghedxp" path="res://assets/fonts/static/Montserrat-Bold.ttf" id="1_xnrt1"]
+
+[resource]
+font = ExtResource("1_xnrt1")

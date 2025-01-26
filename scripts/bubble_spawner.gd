@@ -4,8 +4,6 @@ signal bubble_spawned(bubble_instance)
 
 @onready var bubble_scene = preload("res://scenes/bubble.tscn")
 
-@export var colors: Array[Color]
-
 @export var spawn_time : float = 2.5
 
 @export var pos_range : Array[Marker2D]
@@ -26,7 +24,7 @@ func _on_timer_timeout() -> void:
 	spawn_bubble()
 
 func set_bubble_color(instance: RigidBody2D):
-	instance.modulate = colors.pick_random()
+	instance.modulate = GameManager.colors.pick_random()
 
 
 #func _on_path_bubble_spawn_timeout():

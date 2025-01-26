@@ -4,3 +4,4 @@
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_51d6n")
+colors = Array[Color]([Color(0.3775, 1, 0.17, 0.701961), Color(1, 0.842, 0.21, 0.760784), Color(0.13, 0.304, 1, 0.741176), Color(1, 1, 1, 1)])

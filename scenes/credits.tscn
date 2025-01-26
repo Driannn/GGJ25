@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhfd4n1gibjfu"]
+[gd_scene load_steps=4 format=3 uid="uid://dhfd4n1gibjfu"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_7o8eg"]
 [ext_resource type="Texture2D" uid="uid://ut8n0dxs6hxm" path="res://assets/creditos.png" id="1_ugk3g"]
+[ext_resource type="FontFile" uid="uid://buo44i8ghedxp" path="res://assets/fonts/static/Montserrat-Bold.ttf" id="3_l7b5g"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -34,6 +35,7 @@ offset_right = -44.0
 offset_bottom = -27.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_l7b5g")
 text = "BACK TO MENU"
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

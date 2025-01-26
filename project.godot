@@ -36,6 +36,7 @@ folder_colors={
 "res://addons/": "gray",
 "res://assets/": "orange",
 "res://autoloads/": "blue",
+"res://resources/": "yellow",
 "res://scenes/": "purple",
 "res://scripts/": "green",
 "res://z_driann test/": "gray",
