@@ -10,7 +10,12 @@
 		{
 			"uuid": "d232ec0f-7cd3-4019-8d93-e24b6705bd27",
 			"title": "Todo",
-			"tasks": []
+			"tasks": [
+				"2f828ac9-f172-438d-9503-1ab62e676477",
+				"89637f08-a271-4dbf-8ea4-00b0f3b3dcc4",
+				"cdd4fd94-0de4-48b7-85ac-34b2ca6f37c6",
+				"9a6ac88f-eec7-4181-a0db-42cf7ba18ae5"
+			]
 		},
 		{
 			"uuid": "474e03b6-2b90-4bea-bbab-f4e057bce752",
@@ -23,7 +28,36 @@
 			"tasks": []
 		}
 	],
-	"tasks": [],
+	"tasks": [
+		{
+			"uuid": "2f828ac9-f172-438d-9503-1ab62e676477",
+			"title": "boton de pausa",
+			"description": "",
+			"category": "5338c6f0-b1a0-45c6-bb81-06bbdd3fdf78",
+			"steps": []
+		},
+		{
+			"uuid": "89637f08-a271-4dbf-8ea4-00b0f3b3dcc4",
+			"title": "poner los creditos",
+			"description": "",
+			"category": "5338c6f0-b1a0-45c6-bb81-06bbdd3fdf78",
+			"steps": []
+		},
+		{
+			"uuid": "cdd4fd94-0de4-48b7-85ac-34b2ca6f37c6",
+			"title": "poner la pantalla de inicio",
+			"description": "",
+			"category": "5338c6f0-b1a0-45c6-bb81-06bbdd3fdf78",
+			"steps": []
+		},
+		{
+			"uuid": "9a6ac88f-eec7-4181-a0db-42cf7ba18ae5",
+			"title": "poner la pantalla de game over",
+			"description": "",
+			"category": "5338c6f0-b1a0-45c6-bb81-06bbdd3fdf78",
+			"steps": []
+		}
+	],
 	"layout": {
 		"columns": [
 			[
