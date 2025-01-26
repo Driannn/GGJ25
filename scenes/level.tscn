@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dks5m2u7v5rfw"]
+[gd_scene load_steps=6 format=3 uid="uid://dks5m2u7v5rfw"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_1sp4q"]
 [ext_resource type="PackedScene" uid="uid://kgy4abekhjv1" path="res://scenes/background.tscn" id="2_sj0by"]
 [ext_resource type="PackedScene" uid="uid://cwrgpavkuqxta" path="res://scenes/ui.tscn" id="3_s07ar"]
 [ext_resource type="PackedScene" uid="uid://glqk1ykpkthp" path="res://scenes/bubble_spawner.tscn" id="4_kgni4"]
-[ext_resource type="PackedScene" uid="uid://bvqop3orl2ujv" path="res://scenes/bubble.tscn" id="5_k7cvv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f68vk"]
 
@@ -18,14 +17,6 @@ layer = -100
 
 [node name="BubbleSpawner" parent="." instance=ExtResource("4_kgni4")]
 position = Vector2(0, 868)
-
-[node name="bubble" parent="." instance=ExtResource("5_k7cvv")]
-modulate = Color(0.116667, 1, 0, 0.47451)
-position = Vector2(326, 567)
-
-[node name="bubble2" parent="." instance=ExtResource("5_k7cvv")]
-modulate = Color(1, 0.883333, 0, 0.415686)
-position = Vector2(173, 566)
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
 
@@ -43,7 +34,7 @@ shape = SubResource("WorldBoundaryShape2D_f68vk")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 position = Vector2(574, 611)
-rotation = -0.55896
+rotation = -0.558523
 scale = Vector2(-7.39338, -4.56431)
 color = Color(0.67, 0.67, 0.67, 1)
 energy = 2.87

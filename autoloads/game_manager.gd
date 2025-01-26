@@ -36,7 +36,21 @@ var current_step := 0
 	##sequence_updated.emit()
 
 func on_color_pop(color):
-	print(color)
+	print('picked color:' + color.to_html() + ' expected color: ' + sequence[current_step].to_html())
+	# the last color does not break the sequence
+	if colors[3].to_html() == color.to_html():
+		return
+	#correct color of the sequence?
+	if sequence[current_step].to_html() == color.to_html():
+		print('Good , you are on sequence')
+		current_step += 1
+		if current_step >= sequence.size():
+			current_step = 0
+			score += 9
+			print('NICE MOVE! completed sequence')			
+	else:
+		print('Reseted sequence, you failed')
+		current_step = 0
 
 func add_to_sequence():
 	sequence.append(colors.pick_random())
