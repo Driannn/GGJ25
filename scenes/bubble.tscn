@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bvqop3orl2ujv"]
+[gd_scene load_steps=15 format=3 uid="uid://bvqop3orl2ujv"]
 
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="1_wtqfv"]
 [ext_resource type="AudioStream" uid="uid://ctmv7djr8x03y" path="res://assets/audio/sfx/pop-001.wav" id="2_binm6"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cpb6u4edmkrpm" path="res://assets/audio/sfx/pop-004.wav" id="5_lbu2a"]
 [ext_resource type="AudioStream" uid="uid://l8rft05e30mr" path="res://assets/audio/sfx/pop-005.wav" id="6_0niyk"]
 [ext_resource type="AudioStream" uid="uid://c8psii8ondnl0" path="res://assets/audio/sfx/pop-006.wav" id="7_81j1g"]
+[ext_resource type="Texture2D" uid="uid://bnn8xkvxah6h" path="res://assets/burbuja256-pop.png" id="9_oioyq"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8axa4"]
 bounce = 0.32
@@ -40,6 +41,13 @@ func _on_input_event(viewport, event, shape_idx):
 		# Detectar clic izquierdo presionado
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			emit_signal(\"on_pop\")
+			#cambia sprite
+			var bubble_sprite = $bubble_sprite
+			bubble_sprite.visible = false
+			var bubble_sprite_pop = $bubble_sprite_pop
+			bubble_sprite_pop.visible = true
+			#espera un tiempo
+			await get_tree().create_timer(0.05).timeout
 			get_parent().queue_free()  # Eliminar el nodo
 			
 "
@@ -76,9 +84,16 @@ scale = Vector2(0.39, 0.39)
 shape = SubResource("CircleShape2D_y6x2k")
 debug_color = Color(0.7, 0, 0, 0.419608)
 
-[node name="Sprite2D" type="Sprite2D" parent="area"]
+[node name="bubble_sprite" type="Sprite2D" parent="area"]
+modulate = Color(1, 1, 1, 0.639216)
 scale = Vector2(0.39, 0.39)
 texture = ExtResource("2_f6kta")
+
+[node name="bubble_sprite_pop" type="Sprite2D" parent="area"]
+visible = false
+modulate = Color(1, 1, 1, 0.639216)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("9_oioyq")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="on_pop" from="area" to="." method="_on_area_on_pop"]
