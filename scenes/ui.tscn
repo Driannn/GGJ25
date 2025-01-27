@@ -109,6 +109,7 @@ offset_bottom = 20.0
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.892895, 0.892895)
+mouse_filter = 2
 script = ExtResource("6_akjsf")
 hintBubbles = [1, 2, null]
 
